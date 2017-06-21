@@ -15,7 +15,6 @@ router.get('/', function(req, res, next) {
 router.delete('/', function(req, res, next) {
     var db = req.db;
     var userId = req.body.userId;
-    console.log('userId', req.body);
     //设置collection
     var collection = db.get('usercollection');
 

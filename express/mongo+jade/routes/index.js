@@ -53,7 +53,7 @@ router.post('/adduser', function(req, res) {
 router.post('/user/:id', function(req, res) {
   var db = req.db;
   var id = req.params.id;
-  db.get('usercollection').update({ _id: id }, req.body,
+  db.get('usercollection').update({ _id: id }, { $set: req.body },
     function(err, doc) {
       if(err) {
         res.send("There was a problem adding the information to the database.");

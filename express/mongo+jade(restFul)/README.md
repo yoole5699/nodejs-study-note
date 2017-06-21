@@ -1,4 +1,6 @@
-# express+mongodb+jade
+# mongodb+jade(restFul)
+
+主要参考教程[使用NODE.JS EXPRESS和MONGODB制作一个简单的RESTFUL网站程序](http://www.jianshu.com/p/8a90687576f9)
 
 先要在本机装好mongodb，参考[Mac 上安装MongoDB](http://www.jianshu.com/p/dd0c39bf7be4)
 
@@ -17,6 +19,7 @@
 
 再开启一个终端，必须**先开启mongodb服务，再新建一个mongodb的数据库test**
 	
+	yarn install
 	yarn start
 	
 就可以进行正常的crud了。
