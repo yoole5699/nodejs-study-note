@@ -1,0 +1,36 @@
+mixin copyright
+  | &#169;
+
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type="text/javascript", src="http://code.jquery.com/jquery-2.1.1.min.js")
+    script(type="text/javascript").
+      function deleteUser(id) {
+          $.ajax({
+            type: 'DELETE',
+            url: 'users',
+            contentType: 'application/json',
+            data: JSON.stringify({
+              userId: id
+            }),
+            success: function(msg) {
+              window.location.href = '/users';
+            },
+            error: function() {
+              alert('error');
+            }
+          });
+      }
+  body
+    block content
+    br
+    a(href="/newuser") add user
+    br
+    a(href="/users") return to userList
+    p
+      +copyright
+      |  by yoole in 2017.6.20
+

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Information
+    p username:&nbsp;&nbsp;
+      b #{user.username}
+    p email:&nbsp;&nbsp;
+      b #{user.email}
+    form#formEditUser(name='user', method='post',action='/user/#{user._id}')
+        input#inputUserName(type="text", placeholder="new username", name="username")
+        &nbsp;&nbsp;
+        input#inputUserEmail(type="text", placeholder="new useremail", name="email")
+        &nbsp;&nbsp;
+        button#btnSubmit(type="submit") submit

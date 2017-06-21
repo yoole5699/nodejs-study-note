@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1.
+        User List
+    h3 click the label to edit the information
+    ul
+        each user, i in userlist
+            li
+                a(href="/user/#{user._id}") #{user.username}
+                &nbsp;&nbsp;
+                button(onclick="deleteUser('#{user._id}')") 删除
