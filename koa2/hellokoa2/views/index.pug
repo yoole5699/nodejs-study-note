@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div!= _content
+  h2 koa2 request post demo
+  form(method="POST" action="/")
+    p userName
+    br
+    input(name="userName")
+    br
+    p nickName
+    br
+    input(name="nickName")
+    br
+    p Email
+    br
+    input(name="email")
+    br
+    input(type="submit")
