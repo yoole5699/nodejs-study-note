@@ -1,9 +1,9 @@
 // inspect 将任意对象转换为字符串
 const inspect = require('util').inspect;
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const Busboy = require('busboy');
+const fs      = require('fs');
+const path    = require('path');
+const os      = require('os');
+const Busboy  = require('busboy');
 
 /**
  * 同步创建文件目录,不存在则创建，已存在则跳过
