@@ -23,7 +23,7 @@ function mkdirsSync(dirname) {
 
 /**
  * 获取上传文件的后缀名
- * @param  {string
+ * @param  {string}
  * } fileName 上传文件的名字
  * @return {string} 文件后缀名
  */
